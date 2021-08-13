@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script lec 2</title>
+    
+</head>
+<body>
+        <h1 style="text-align: center;">JS Assignment #1</h1>
+        <h1 style="text-align: center;">M.Naveed Aslam</h1>
+        <h1 id="txt">I have always been fan of Pizza . Though Pizza is not a local Pizza dish but Pizza has gained so much popularity in here too.</h1>
+        <input type="text" name="" id="getdata" style="width: 300px;height: 20px;" placeholder="Enter Word Replacement">
+        <!-- <input type="text" name="" id="getdata1" style="width: 300px;height: 20px;" placeholder="Please Enter New Word"> -->
+        <!-- <button onclick="changeChar()">Change Pizza</button> -->
+        <button onclick="changeChar1()">Change Words</button>
+<script>
+//     function changeChar() {
+//             var data=document.getElementById('txt').innerHTML;
+//             var pizza = document.getElementById("getdata").value; 
+//             var changed = data.replace(/Pizza/g, pizza);
+//             document.getElementById("txt").innerHTML = changed;
+//             document.getElementById("txt").style.color="red"
+//     }
+
+    function changeChar1 () {
+            var txt = document.getElementById('txt').innerHTML;
+            var replacer = document.getElementById("getdata").value; 
+           // var dish = document.getElementById("getdata1").value; 
+            var txtArray = txt.split(" ");
+            var newtxt = [ ]; 
+            var ii = 1;
+            for (var i = 0; i < txtArray.length; i++){
+             if (txtArray[i] == replacer){
+                var dish = prompt("Enter "+ ii++  +" Dish Name"); 
+                newtxt [i] = txtArray[i].replace(replacer , dish);
+             }  
+             else{
+                newtxt [i] = txtArray [i];
+             }
+           }
+           document.getElementById("txt").innerHTML = newtxt.join(" ");
+           //console.log(newtxt.join(" "));
+    }
+
+//     let a = prompt("Enter 1st Num");
+//     let b = prompt("Enter 2nd Num");
+
+//     function sum (a,b){
+//             let c = +a + +b;
+//             return c; 
+//     }
+//     function mul (a,b){
+//             let c = +a * +b;
+//             return c; 
+//     }
+//     let res = sum (a,b);
+//     let res1 = mul (a,b);
+//     console.log("Addition "+res, "Multiplication "+res1);
+
+
+</script>
+
+</body>
+</html>
